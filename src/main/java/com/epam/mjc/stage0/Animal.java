@@ -15,6 +15,11 @@ public class Animal {
 	public String getDescription() {
 		String hasFurAnswerString = hasFur == true ? "a" : "no";
 		String pawOrPaws = numberOfPaws <= 1 ? "paw" : "paws";
-		return "This animal is mostly %s. It has %s %s and %s fur.".formatted(color, numberOfPaws, pawOrPaws, hasFurAnswerString);
+		return "This animal is mostly " + color + "." +
+				"It has " + numberOfPaws + " "  + pawOrPaws + " and " + hasFurAnswerString + " fur.";
+	}
+	public static void main(String[] args) {
+		Animal mAnimal = new Animal("green", 2, false);
+		System.out.println(mAnimal.getDescription()); 
 	}
 }
